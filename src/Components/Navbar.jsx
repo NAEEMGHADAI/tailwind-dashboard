@@ -14,7 +14,7 @@ const Navbar = () => {
 		return () => window.removeEventListener("resize", handleResize);
 	}, [setScreenSize]);
 	useEffect(() => {
-		if (screenSize <= 900) {
+		if (screenSize <= 1000) {
 			setActiveMenu(false);
 		} else {
 			setActiveMenu(true);
@@ -22,7 +22,7 @@ const Navbar = () => {
 	}, [screenSize, setActiveMenu]);
 	return (
 		<div className="flex justify-between text-white pt-4 pb-4 sm:pt-10 pl-5 pr-5 sm:pb-5 md:ml-6 md:mr-6 relative">
-			{screenSize <= 900 && !activeMenu ? (
+			{screenSize <= 1000 && !activeMenu ? (
 				<img src={logo2} alt="" width="50" height="50" />
 			) : (
 				<h1 className="text-2xl">Dashboard</h1>
@@ -30,7 +30,7 @@ const Navbar = () => {
 			<button className="bg-blue-600 text-white rounded-xl  hover:bg-blue-800 w-full mr-8 ml-8 md:w-36 md:pt-3 md:pb-3   relative">
 				Connect Wallet
 			</button>
-			{screenSize <= 900 && !activeMenu ? (
+			{screenSize <= 1000 && !activeMenu ? (
 				<button onClick={() => setActiveMenu((prev) => !prev)}>
 					<span className="absolute inline-flex rounded-full h-5 w-5 right-2" />
 					<AiOutlineMenu size={35} />

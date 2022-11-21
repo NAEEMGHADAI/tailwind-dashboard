@@ -15,7 +15,7 @@ export default function Sidebar() {
 		"flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2";
 
 	const handleCloseSideBar = () => {
-		if (activeMenu && screenSize <= 900) {
+		if (activeMenu && screenSize <= 1000) {
 			setActiveMenu(false);
 		}
 	};
@@ -27,7 +27,7 @@ export default function Sidebar() {
 						<Link
 							to="/"
 							onClick={() => setActiveMenu(false)}
-							className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900"
+							className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-1000"
 						>
 							<img src={logo} alt="" width="200" height="200" />
 						</Link>
