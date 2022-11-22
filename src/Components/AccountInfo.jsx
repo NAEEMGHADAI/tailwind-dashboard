@@ -14,12 +14,12 @@ const AccountInfo = () => {
 				<h2 className="text-xl">My Account</h2>
 
 				<label className="inline-flex relative items-center cursor-pointer">
-					<span className="text-sm font-medium text-gray-1000 dark:text-gray-300 flex gap-1 mr-1">
+					<span className="text-sm font-medium  text-gray-300 flex gap-1 mr-1">
 						<BsInfoCircle className="mt-1 mr-1" />
 						APY with XVS
 					</span>
 					<input type="checkbox" value="" className="sr-only peer" />
-					<div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[5px] after:left-[115px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+					<div className="w-11 h-6 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-800 rounded-full peer bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[5px] after:left-[115px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all border-gray-600 peer-checked:bg-blue-600"></div>
 				</label>
 			</div>
 			<div>
@@ -80,7 +80,7 @@ const AccountInfo = () => {
 						id="small-range"
 						type="range"
 						defaultValue="80"
-						className="w-full h-1 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm dark:bg-gray-700"
+						className="w-full h-1 mb-6  rounded-lg appearance-none cursor-pointer range-sm bg-gray-700"
 					></input>
 					<div className="flex justify-end">
 						<p>

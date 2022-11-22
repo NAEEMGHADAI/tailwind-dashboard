@@ -11,11 +11,11 @@ const DashboardTable = (props) => {
 				screenSize >= 900 ? "w-2/5" : "w-full"
 			}`}
 		>
-			<table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-				<caption className="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-secondary-dark-bg">
+			<table className="w-full text-sm text-left text-gray-400">
+				<caption className="p-5 text-lg font-semibold text-left text-white bg-secondary-dark-bg">
 					{data[0].title}
 				</caption>
-				<thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-secondary-dark-bg dark:text-gray-400">
+				<thead className="text-xs uppercase bg-secondary-dark-bg text-gray-400">
 					<tr>
 						<th scope="col" className="py-3 px-6">
 							Asset
@@ -74,11 +74,11 @@ const DashboardTable = (props) => {
 					{data.map((ele) => (
 						<tr
 							key={ele.name}
-							className="bg-white border-b dark:bg-secondary-dark-bg dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+							className=" border-b bg-secondary-dark-bg border-gray-700  hover:bg-gray-600"
 						>
 							<th
 								scope="row"
-								className="py-4 px-6 font-medium pt-6 pb-6 text-gray-900 whitespace-nowrap dark:text-white"
+								className="py-4 px-6 font-medium pt-6 pb-6  whitespace-nowrap text-white"
 							>
 								{ele.name}
 							</th>
@@ -90,7 +90,7 @@ const DashboardTable = (props) => {
 								) : (
 									<label className="inline-flex relative items-center cursor-pointer">
 										<input type="checkbox" value="" className="sr-only peer" />
-										<div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+										<div className="w-11 h-6 peer-focus:outline-none peer-focus:ring-4  peer-focus:ring-blue-800 rounded-full peer bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
 									</label>
 								)}
 							</td>

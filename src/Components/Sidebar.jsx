@@ -13,7 +13,7 @@ export default function Sidebar() {
 	const activeLink =
 		"flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white bg-black text-md m-2";
 	const normalLink =
-		"flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2";
+		"flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 text-gray-200 hover:text-black hover:bg-light-gray m-2";
 
 	const handleCloseSideBar = (title) => {
 		if (activeMenu && screenSize <= 1000) {
@@ -29,7 +29,7 @@ export default function Sidebar() {
 						<Link
 							to="/"
 							onClick={() => setActiveMenu(false)}
-							className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-1000"
+							className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight text-white text-slate-1000"
 						>
 							<img src={logo} alt="" width="200" height="200" />
 						</Link>

@@ -6,13 +6,13 @@ const MarketTable = (props) => {
 
 	return (
 		<div
-			className={`overflow-x-auto relative shadow-md rounded-lg w-11/12 ml-12 mt-3`}
+			className={`overflow-x-auto relative  shadow-md rounded-lg w-11/12 ml-12 mt-3`}
 		>
-			<table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-				<caption className="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-secondary-dark-bg">
+			<table className="w-full text-sm text-left bg-secondary-dark-bg  text-gray-400">
+				<caption className="p-5 text-lg font-semibold text-left  text-white bg-secondary-dark-bg">
 					{data[0].title}
 				</caption>
-				<thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-secondary-dark-bg dark:text-gray-400">
+				<thead className="text-xs  uppercase bg-secondary-dark-bg text-gray-400">
 					<tr>
 						<th scope="col" className="py-3 px-6">
 							Asset
@@ -135,11 +135,11 @@ const MarketTable = (props) => {
 					{data.map((ele) => (
 						<tr
 							key={ele.name}
-							className="bg-white border-b dark:bg-secondary-dark-bg dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+							className=" border-b bg-secondary-dark-bg border-gray-700 hover:bg-gray-600"
 						>
 							<th
 								scope="row"
-								className="py-4 px-6 font-medium pt-6 pb-6 text-xl text-gray-900 whitespace-nowrap dark:text-white"
+								className="py-4 px-6 font-medium pt-6 pb-6 text-xl whitespace-nowrap text-white"
 							>
 								{ele.name}
 							</th>

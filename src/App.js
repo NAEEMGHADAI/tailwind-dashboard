@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ReactTooltip from "react-tooltip";
-import { FiSettings } from "react-icons/fi";
+// import ReactTooltip from "react-tooltip";
+// import { FiSettings } from "react-icons/fi";
 import "./App.css";
 import { Dashboard, Market } from "./pages/index";
 import { Sidebar, Navbar } from "./Components/index";
@@ -12,8 +12,8 @@ function App() {
 	return (
 		<div>
 			<BrowserRouter>
-				<div className="flex relative dark:bg-main-dark-bg bg-main-bg">
-					<div className="fixed right-4 bottom-4" style={{ zIndex: 1000 }}>
+				<div className="flex relative bg-main-dark-bg ">
+					{/* <div className="fixed right-4 bottom-4" style={{ zIndex: 1000 }}>
 						<ReactTooltip place="top" id="settings" effect="solid">
 							Settings
 						</ReactTooltip>
@@ -26,22 +26,22 @@ function App() {
 						>
 							<FiSettings />
 						</button>
-					</div>
+					</div> */}
 					{activeMenu ? (
-						<div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
+						<div className="w-72 fixed sidebar bg-secondary-dark-bg">
 							<Sidebar />
 						</div>
 					) : (
-						<div className="w-0 dark:bg-secondary-dark-bg bg-main-bg">
+						<div className="w-0 bg-secondary-dark-bg ">
 							<Sidebar />
 						</div>
 					)}
 					<div
-						className={`dark:bg-main-dark-bg bg-main-bg min-h-screen w-full ${
+						className={`bg-main-dark-bg  min-h-screen w-full ${
 							activeMenu ? "md:ml-72" : "flex-2"
 						}`}
 					>
-						<div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
+						<div className="fixed md:static  bg-main-dark-bg navbar w-full">
 							<Navbar />
 						</div>
 
