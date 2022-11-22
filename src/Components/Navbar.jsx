@@ -4,7 +4,7 @@ import { useStateContext } from "../context/ContextProvider";
 import logo2 from "../data/logo-2.PNG";
 
 const Navbar = () => {
-	const { activeMenu, setActiveMenu, screenSize, setScreenSize } =
+	const { activeMenu, setActiveMenu, screenSize, setScreenSize, pageName } =
 		useStateContext();
 	useEffect(() => {
 		const handleResize = () => setScreenSize(window.innerWidth);
@@ -25,7 +25,7 @@ const Navbar = () => {
 			{screenSize <= 1000 && !activeMenu ? (
 				<img src={logo2} alt="" width="50" height="50" />
 			) : (
-				<h1 className="text-2xl">Dashboard</h1>
+				<h1 className="text-2xl capitalize">{pageName}</h1>
 			)}
 			<button className="bg-blue-600 text-white rounded-xl  hover:bg-blue-800 w-full mr-8 ml-8 md:w-36 md:pt-3 md:pb-3   relative">
 				Connect Wallet

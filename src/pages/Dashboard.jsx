@@ -1,7 +1,9 @@
 import React from "react";
 import AccountInfo from "../Components/AccountInfo";
 import ConnectWallet from "../Components/ConnectWallet";
+import DashboardData from "../Components/DashboardData";
 
+import { supplyMarketData, borrowMarket } from "../data/dummy";
 import { useStateContext } from "../context/ContextProvider";
 
 const Dashboard = () => {
@@ -24,10 +26,12 @@ const Dashboard = () => {
 				<ConnectWallet />
 			</div>
 			<div
-				className={` text-white flex flex-wrap gap-1 mt-5 ${
+				className={` text-white flex flex-wrap gap-1 mt-20 ${
 					screenSize >= 1000 ? ` justify-around` : `flex-col ml-2 mr-2`
 				}`}
-			></div>
+			>
+				<DashboardData data1={supplyMarketData} data2={borrowMarket} />
+			</div>
 		</>
 	);
 };

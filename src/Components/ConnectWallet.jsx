@@ -5,19 +5,27 @@ import { useStateContext } from "../context/ContextProvider";
 const ConnectWallet = () => {
 	const { screenSize } = useStateContext();
 	const [isActive, setIsActive] = useState(0);
-	const activeLink = "h-14 w-24 rounded-lg bg-slate-700";
-	const normalLink = "h-14 w-24 rounded-lg";
+	const activeLink = `h-14  rounded-lg bg-slate-700 ${
+		screenSize >= 570 ? `w-24` : `w-1/2`
+	}`;
+	const normalLink = `h-14 w-24 rounded-lg ${
+		screenSize >= 570 ? `w-24` : `w-1/2`
+	}`;
 	return (
 		<div
-			className={` bg-secondary-dark-bg h-auto rounded-xl pr-4 pl-4 pt-6 pb-6 ${
+			className={`bg-secondary-dark-bg h-auto rounded-xl pr-4 pl-4 pt-6 pb-6 flex-wrap ${
 				screenSize >= 1000 ? `w-2/5` : `w-full mt-10`
 			}`}
 		>
-			<div className="flex justify-between text-white">
+			<div
+				className={`flex  text-white ${
+					screenSize >= 570 ? `justify-between` : `flex-col`
+				}`}
+			>
 				<div>
-					<h2 className="text-xl mt-3">Mint/Repay VAI</h2>
+					<h2 className="mt-3">Mint/Repay VAI</h2>
 				</div>
-				<div className="flex gap-2">
+				<div className={`flex gap-2 text-sm `}>
 					<button
 						className={isActive === 0 ? activeLink : normalLink}
 						onClick={() => setIsActive(0)}

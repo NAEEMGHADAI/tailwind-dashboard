@@ -8,16 +8,18 @@ import { useStateContext } from "../context/ContextProvider";
 import logo from "../data/logo.PNG";
 
 export default function Sidebar() {
-	const { activeMenu, setActiveMenu, screenSize } = useStateContext();
+	const { activeMenu, setActiveMenu, screenSize, setPageName } =
+		useStateContext();
 	const activeLink =
 		"flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white bg-black text-md m-2";
 	const normalLink =
 		"flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2";
 
-	const handleCloseSideBar = () => {
+	const handleCloseSideBar = (title) => {
 		if (activeMenu && screenSize <= 1000) {
 			setActiveMenu(false);
 		}
+		setPageName(title);
 	};
 	return (
 		<div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
@@ -47,7 +49,7 @@ export default function Sidebar() {
 							<NavLink
 								to={`/${items.title}`}
 								key={items.title}
-								onClick={handleCloseSideBar}
+								onClick={() => handleCloseSideBar(items.title)}
 								className={({ isActive }) =>
 									isActive ? activeLink : normalLink
 								}
