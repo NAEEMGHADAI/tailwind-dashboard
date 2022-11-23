@@ -1,7 +1,5 @@
 import React from "react";
-import AccountInfo from "../Components/AccountInfo";
-import ConnectWallet from "../Components/ConnectWallet";
-import DashboardData from "../Components/DashboardData";
+import { AccountInfo, ConnectWallet, DashboardData } from "../Components/index";
 
 import { supplyMarketData, borrowMarket } from "../data/dummy";
 import { useStateContext } from "../context/ContextProvider";
@@ -13,7 +11,7 @@ const Dashboard = () => {
 		<>
 			{screenSize >= 1000 ? null : (
 				<div>
-					<h2 className=" text-2xl text-white mb-2 ml-2 mr-2">Dashboard</h2>
+					<h2 className=" text-2xl text-white mb-2 ml-2">Dashboard</h2>
 				</div>
 			)}
 

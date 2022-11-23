@@ -28,7 +28,7 @@ function App() {
 						</button>
 					</div> */}
 					{activeMenu ? (
-						<div className="w-72 fixed sidebar bg-secondary-dark-bg">
+						<div className="w-full md:w-72 fixed sidebar bg-secondary-dark-bg">
 							<Sidebar />
 						</div>
 					) : (

@@ -11,24 +11,27 @@ export default function Sidebar() {
 	const { activeMenu, setActiveMenu, screenSize, setPageName } =
 		useStateContext();
 	const activeLink =
-		"flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white bg-black text-md m-2";
+		"flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-md text-white bg-active-link-bg text-md border-l-4 border-blue-700 mt-2 mb-2";
 	const normalLink =
-		"flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 text-gray-200 hover:text-black hover:bg-light-gray m-2";
+		"flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-200 hover:bg-active-link-bg mt-2 mb-2";
 
 	const handleCloseSideBar = (title) => {
 		if (activeMenu && screenSize <= 1000) {
-			setActiveMenu(false);
+			setActiveMenu((prev) => {
+				return !prev;
+			});
 		}
-		setPageName(title);
+		if (typeof title === "string") {
+			setPageName(title);
+		}
 	};
 	return (
-		<div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
+		<div className="h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
 			{activeMenu && (
 				<>
 					<div className="flex justify-between items-center">
 						<Link
 							to="/"
-							onClick={() => setActiveMenu(false)}
 							className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight text-white text-slate-1000"
 						>
 							<img src={logo} alt="" width="200" height="200" />
@@ -47,7 +50,7 @@ export default function Sidebar() {
 					<div className="mt-10">
 						{links.map((items) => (
 							<NavLink
-								to={`/${items.title}`}
+								to={`/${items.link}`}
 								key={items.title}
 								onClick={() => handleCloseSideBar(items.title)}
 								className={({ isActive }) =>

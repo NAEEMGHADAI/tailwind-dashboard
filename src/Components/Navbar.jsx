@@ -6,6 +6,7 @@ import logo2 from "../data/logo-2.PNG";
 const Navbar = () => {
 	const { activeMenu, setActiveMenu, screenSize, setScreenSize, pageName } =
 		useStateContext();
+
 	useEffect(() => {
 		const handleResize = () => setScreenSize(window.innerWidth);
 		window.addEventListener("resize", handleResize);
@@ -31,7 +32,14 @@ const Navbar = () => {
 				Connect Wallet
 			</button>
 			{screenSize <= 1000 && !activeMenu ? (
-				<button onClick={() => setActiveMenu((prev) => !prev)}>
+				<button
+					onClick={() =>
+						setActiveMenu((prev) => {
+							console.log(prev);
+							return !prev;
+						})
+					}
+				>
 					<span className="absolute inline-flex rounded-full h-5 w-5 right-2" />
 					<AiOutlineMenu size={35} />
 				</button>

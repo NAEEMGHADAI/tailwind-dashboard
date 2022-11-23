@@ -6,12 +6,14 @@ const AccountInfo = () => {
 	const { screenSize } = useStateContext();
 	return (
 		<div
-			className={` bg-secondary-dark-bg h-fit rounded-xl pr-4 pl-4 pt-6 pb-6 ${
-				screenSize >= 1000 ? ` w-5/12` : `w-full`
+			className={` bg-secondary-dark-bg h-fit rounded-2xl pr-4 pl-4 pt-6 pb-6 ${
+				screenSize >= 1000 ? ` w-5/12` : ` ml-4 mr-4`
 			}`}
 		>
 			<div className="flex justify-between">
-				<h2 className="text-xl">My Account</h2>
+				<h2 className={` ${screenSize >= 400 ? `text-xl` : `text-sm`}`}>
+					My Account
+				</h2>
 
 				<label className="inline-flex relative items-center cursor-pointer">
 					<span className="text-sm font-medium  text-gray-300 flex gap-1 mr-1">
@@ -19,7 +21,7 @@ const AccountInfo = () => {
 						APY with XVS
 					</span>
 					<input type="checkbox" value="" className="sr-only peer" />
-					<div className="w-11 h-6 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-800 rounded-full peer bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[5px] after:left-[115px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all border-gray-600 peer-checked:bg-blue-600"></div>
+					<div className="w-11 h-6 bg-main-dark-bg peer-focus:outline-none peer-focus:ring-4  peer-focus:ring-blue-800 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[3px] after:left-[115px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
 				</label>
 			</div>
 			<div>
@@ -36,9 +38,9 @@ const AccountInfo = () => {
 				}`}
 			>
 				<div
-					className={`pr-5 ${
+					className={` ${
 						screenSize >= 1000
-							? `border-r-2 border-slate-600`
+							? `border-r-2 border-slate-600 pr-5`
 							: `flex justify-between`
 					}`}
 				>
@@ -46,18 +48,16 @@ const AccountInfo = () => {
 					<h5 className=" text-lg">$0.00</h5>
 				</div>
 				<div
-					className={`pr-5 ${
+					className={`${
 						screenSize >= 1000
-							? `border-r-2 border-slate-600`
+							? `border-r-2 border-slate-600 pr-5`
 							: `flex justify-between`
 					}`}
 				>
 					<p className="text-slate-600 text-sm">Supply balance</p>
 					<h5 className=" text-lg">$0.00</h5>
 				</div>
-				<div
-					className={`pr-5 ${screenSize >= 1000 ? `` : `flex justify-between`}`}
-				>
+				<div className={`${screenSize >= 1000 ? `` : `flex justify-between`}`}>
 					<p className="text-slate-600 text-sm">Borrow balance</p>
 					<h5 className=" text-lg">$0.00</h5>
 				</div>

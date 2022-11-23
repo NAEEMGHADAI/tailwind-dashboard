@@ -3,10 +3,12 @@ import { GoGraph } from "react-icons/go";
 export const links = [
 	{
 		title: "dashboard",
+		link: "",
 		icon: <BiHome />,
 	},
 	{
 		title: "market",
+		link: "market",
 		icon: <GoGraph />,
 	},
 ];

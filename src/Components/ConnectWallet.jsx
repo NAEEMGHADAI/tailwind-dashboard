@@ -13,8 +13,8 @@ const ConnectWallet = () => {
 	}`;
 	return (
 		<div
-			className={`bg-secondary-dark-bg h-auto rounded-xl pr-4 pl-4 pt-6 pb-6 flex-wrap ${
-				screenSize >= 1000 ? `w-2/5` : `w-full mt-10`
+			className={`bg-secondary-dark-bg h-auto rounded-2xl ml-4 mr-4 pr-4 pl-4 pt-6 pb-6 flex-wrap ${
+				screenSize >= 1000 ? `w-2/5` : `mt-10`
 			}`}
 		>
 			<div

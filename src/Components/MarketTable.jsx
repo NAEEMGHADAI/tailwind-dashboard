@@ -6,7 +6,7 @@ const MarketTable = (props) => {
 
 	return (
 		<div
-			className={`overflow-x-auto relative  shadow-md rounded-lg w-11/12 ml-12 mt-3`}
+			className={`overflow-x-auto relative  shadow-md rounded-lg w-11/12 ml-12 mt-6`}
 		>
 			<table className="w-full text-sm text-left bg-secondary-dark-bg  text-gray-400">
 				<caption className="p-5 text-lg font-semibold text-left  text-white bg-secondary-dark-bg">

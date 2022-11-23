@@ -6,7 +6,7 @@ const MarketHeadline = () => {
 	const { screenSize } = useStateContext();
 	return screenSize > 1300 ? (
 		<div
-			className={`bg-secondary-dark-bg h-fit rounded-2xl  ml-5 mr-5 pt-1 pb-1`}
+			className={`bg-secondary-dark-bg h-fit rounded-2xl  ml-12 mr-14 pt-1 pb-1`}
 		>
 			<div className="flex gap-5 mt-3 mb-3 flex-wrap">
 				{maketHeadline.map((ele, i) => (

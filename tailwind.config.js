@@ -11,6 +11,7 @@ module.exports = {
 				"main-bg": "#FAFBFB",
 				"main-dark-bg": "#1F2028",
 				"secondary-dark-bg": "#282931",
+				"active-link-bg": "#383944",
 				info: "#24252E",
 			},
 		},
