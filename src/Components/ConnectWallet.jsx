@@ -19,13 +19,13 @@ const ConnectWallet = () => {
 		>
 			<div
 				className={`flex  text-white ${
-					screenSize >= 570 ? `justify-between` : `flex-col`
+					screenSize >= 570 ? `justify-between` : `flex-col gap-3`
 				}`}
 			>
 				<div>
-					<h2 className="mt-3">Mint/Repay VAI</h2>
+					<h2 className="mt-3 text-xl font-bold">Mint/Repay VAI</h2>
 				</div>
-				<div className={`flex gap-2 text-sm `}>
+				<div className={`flex gap-2 text-sm`}>
 					<button
 						className={isActive === 0 ? activeLink : normalLink}
 						onClick={() => setIsActive(0)}

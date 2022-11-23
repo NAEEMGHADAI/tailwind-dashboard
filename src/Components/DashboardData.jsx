@@ -16,7 +16,7 @@ const DashboardData = (props) => {
 		</>
 	) : (
 		<>
-			<h3 className="text-center text-white text-2xl">Market</h3>
+			<h3 className="text-center text-white text-2xl font-bold mb-2">Market</h3>
 			<div className={`flex gap-2 text-sm ml-4 mr-4`}>
 				<button
 					className={isActive === 0 ? activeLink : normalLink}

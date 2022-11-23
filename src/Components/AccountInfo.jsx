@@ -13,7 +13,7 @@ const AccountInfo = () => {
 			}`}
 		>
 			<div className="flex justify-between">
-				<h2 className={` ${screenSize >= 400 ? `text-xl` : `text-sm`}`}>
+				<h2 className={`font-bold ${screenSize >= 400 ? `text-xl` : ``}`}>
 					My Account
 				</h2>
 

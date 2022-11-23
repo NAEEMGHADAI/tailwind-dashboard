@@ -11,7 +11,9 @@ const Dashboard = () => {
 		<>
 			{screenSize >= 1000 ? null : (
 				<div>
-					<h2 className=" text-2xl text-white mb-2 ml-2">Dashboard</h2>
+					<h2 className=" text-2xl font-bold text-white mb-2 ml-5">
+						Dashboard
+					</h2>
 				</div>
 			)}
 
