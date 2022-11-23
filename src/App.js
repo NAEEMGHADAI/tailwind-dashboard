@@ -28,7 +28,7 @@ function App() {
 						</button>
 					</div> */}
 					{activeMenu ? (
-						<div className="w-full md:w-72 fixed sidebar bg-secondary-dark-bg">
+						<div className="w-full md:w-48 fixed sidebar bg-secondary-dark-bg">
 							<Sidebar />
 						</div>
 					) : (
@@ -38,7 +38,7 @@ function App() {
 					)}
 					<div
 						className={`bg-main-dark-bg  min-h-screen w-full ${
-							activeMenu ? "md:ml-72" : "flex-2"
+							activeMenu ? "md:ml-48" : "flex-2"
 						}`}
 					>
 						<div className="fixed md:static  bg-main-dark-bg navbar w-full">

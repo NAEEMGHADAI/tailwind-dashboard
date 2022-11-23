@@ -16,7 +16,7 @@ const Dashboard = () => {
 			)}
 
 			<div
-				className={` text-white flex flex-wrap gap-1 ${
+				className={` text-white flex flex-wrap  ${
 					screenSize >= 1000 ? ` justify-around` : `flex-col ml-2 mr-2`
 				}`}
 			>
