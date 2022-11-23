@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsInfoCircle } from "react-icons/bs";
 import { useStateContext } from "../context/ContextProvider";
 
 const AccountInfo = () => {
 	const { screenSize } = useStateContext();
+	const [toggle, setToggle] = useState(true);
+	const toggleClass = " transform translate-x-6";
 	return (
 		<div
 			className={` bg-secondary-dark-bg h-fit rounded-2xl pr-4 pl-4 pt-6 pb-6 ${
@@ -20,8 +22,19 @@ const AccountInfo = () => {
 						<BsInfoCircle className="mt-1 mr-1" />
 						APY with XVS
 					</span>
-					<input type="checkbox" value="" className="sr-only peer" />
-					<div className="w-11 h-6 bg-main-dark-bg peer-focus:outline-none peer-focus:ring-4  peer-focus:ring-blue-800 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[3px] after:left-[115px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+					<div
+						className="md:w-14 md:h-7 w-12 h-6 flex items-center bg-main-dark-bg rounded-full p-1 cursor-pointer"
+						onClick={() => {
+							setToggle(!toggle);
+						}}
+					>
+						<div
+							className={
+								" bg-button-color md:w-6 md:h-6 h-5 w-5 rounded-full shadow-md transform duration-300 ease-in-out" +
+								(toggle ? null : toggleClass)
+							}
+						></div>
+					</div>
 				</label>
 			</div>
 			<div>
