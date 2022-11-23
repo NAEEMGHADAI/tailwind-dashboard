@@ -47,7 +47,7 @@ const TableInDataFormat = (props) => {
 			<h3 className="border-b-2 pb-2 text-white text-sm border-slate-600">
 				{ele[keys[1]]}
 			</h3>
-			<div className="flex justify-between pt-4 text-white flex-wrap gap-16">
+			<div className="flex justify-between pt-4 text-white flex-wrap gap-12">
 				{keys.map((k, i) =>
 					i < 2 ? null : (
 						<div key={k}>
