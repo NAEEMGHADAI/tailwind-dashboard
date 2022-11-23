@@ -7,3 +7,4 @@ export { default as DashboardTable } from "./DashboardTable";
 export { default as MarketHeadline } from "./MarketHeadline";
 export { default as MarketTable } from "./MarketTable";
 export { default as TableInDataFormat } from "./TableInDataFormat";
+export { default as Footer } from "./Footer";
