@@ -3,9 +3,30 @@ import { useStateContext } from "../context/ContextProvider";
 
 const DashboardTable = (props) => {
 	const [data, setData] = useState(props.data);
-	const [toggle, setToggle] = useState(true);
+
 	const toggleClass = " transform translate-x-6";
 	const { screenSize } = useStateContext();
+
+	const ToggleItem = () => {
+		const [toggle, setToggle] = useState(true);
+		return (
+			<label className="inline-flex relative items-center cursor-pointer">
+				<div
+					className="md:w-14 md:h-7 w-12 h-6 flex items-center bg-main-dark-bg rounded-full p-1 cursor-pointer"
+					onClick={() => {
+						setToggle(!toggle);
+					}}
+				>
+					<div
+						className={
+							" bg-button-color md:w-6 md:h-6 h-5 w-5 rounded-full shadow-md transform duration-300 ease-in-out" +
+							(toggle ? null : toggleClass)
+						}
+					></div>
+				</div>
+			</label>
+		);
+	};
 
 	return (
 		<div
@@ -87,25 +108,7 @@ const DashboardTable = (props) => {
 							<td className="py-4 px-6">{ele.apy}</td>
 							<td className="py-4 px-6">{`0 ${ele.name}`}</td>
 							<td className="py-4 px-6">
-								{ele.liquidity ? (
-									`$ ${ele.liquidity}`
-								) : (
-									<label className="inline-flex relative items-center cursor-pointer">
-										<div
-											className="md:w-14 md:h-7 w-12 h-6 flex items-center bg-main-dark-bg rounded-full p-1 cursor-pointer"
-											onClick={() => {
-												setToggle(!toggle);
-											}}
-										>
-											<div
-												className={
-													" bg-button-color md:w-6 md:h-6 h-5 w-5 rounded-full shadow-md transform duration-300 ease-in-out" +
-													(toggle ? null : toggleClass)
-												}
-											></div>
-										</div>
-									</label>
-								)}
+								{ele.liquidity ? `$ ${ele.liquidity}` : <ToggleItem />}
 							</td>
 						</tr>
 					))}

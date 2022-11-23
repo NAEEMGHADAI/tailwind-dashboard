@@ -45,7 +45,7 @@ function App() {
 							<Navbar />
 						</div>
 
-						<div className={screenSize <= 786 ? "mt-28" : "mt-5 mb-20"}>
+						<div className={screenSize <= 786 ? "mt-28 mb-20" : "mt-5 mb-20"}>
 							<Routes>
 								<Route path="/" element={<Dashboard />} />
 								<Route path="/dashboard" element={<Dashboard />} />
